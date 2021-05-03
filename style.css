@@ -1,4 +1,14 @@
+body
+{
+	display: block;
+	min-height: 100px;
+}
 h1
 {
-	font-size: 14px;
+	color: red;
+}
+h2
+{
+
+	color: blue;
 }
