@@ -2,7 +2,7 @@
 
 <h2 align=center>Git Test<h2>
 
-<p align=justify>Repository to add Gen exercises to git testing.<p>
+<p align=justify>Repository to add Gen exercises for git testing.<p>
 
 <br>
 
