@@ -1,10 +1,10 @@
-package ex_1;
+package ex_logica;
 
 
 import java.util.*;
 
 
-public class execicio4 {
+public class exercicio4 {
 
 	public static void main(String[] args) {
 		
