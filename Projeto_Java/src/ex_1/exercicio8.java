@@ -2,7 +2,7 @@ package ex_1;
 
 import java.util.*;
 
-public class exercicio6 {
+public class exercicio8 {
 
 	public static void main(String[] args) {
 		
