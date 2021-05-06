@@ -8,18 +8,15 @@ public class ex_doWhile1 {
 		
 		Scanner read = new Scanner(System.in);
 		int num, soma = 0;
-		
-		
-		
+				
 		do
 		{
+			
 			System.out.print("\nEntre com um número inteiro: ");
 			num = read.nextInt();
 			
-			if(num != 0)
-			{
-				soma = soma + num;
-			}
+			soma = soma + num;
+	
 		}
 		while(num != 0);
 		
