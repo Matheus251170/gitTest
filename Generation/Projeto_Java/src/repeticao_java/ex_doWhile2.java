@@ -13,10 +13,9 @@ public class ex_doWhile2 {
 			System.out.print("\nEntre com um valor inteiro: ");
 			num = ler.nextInt();
 			
-			if(num != 0)
-			{
-				soma = soma + num;
-			}
+			
+			soma = soma + num;
+			
 			cont++;
 		}
 		while(num != 0);
