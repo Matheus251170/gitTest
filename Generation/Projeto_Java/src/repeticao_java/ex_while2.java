@@ -1,6 +1,7 @@
 package repeticao_java;
 
 import java.util.*;
+
 public class ex_while2 {
 
 	public static void main(String[] args) {
@@ -67,11 +68,11 @@ public class ex_while2 {
 				{
 					FemNerv++;
 				}
-				else if(sexo == 0 && perso == 2)
+				if(sexo == 0 && perso == 2)
 				{
 					MascViol++;
 				}
-				else if(sexo == 2 && perso == 0)
+				if(sexo == 2 && perso == 0)
 				{
 					outrosCalm++;
 				}
