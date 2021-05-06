@@ -23,19 +23,19 @@ public class ex_while2 {
 				switch(sexo)
 				{
 					case 0: 
-						System.out.println("Sexo masculino!");
+						System.out.println("\nSexo masculino!");
 						break;
 					
 					case 1:
-						System.out.println("Sexo feminino!");
+						System.out.println("\nSexo feminino!");
 						break;
 						
 					case 2: 
-						System.out.println("Outro!");
+						System.out.println("\nOutro!");
 						break;
 						
 					default:
-						System.out.println("Opção inválida! Por favor, escolha uma das opções listadas!");
+						System.out.println("\nOpção inválida! Por favor, escolha uma das opções listadas!");
 						
 				}
 				
@@ -47,20 +47,20 @@ public class ex_while2 {
 				switch(perso)
 				{
 					case 0: 
-						System.out.println("Calma!");
+						System.out.println("\nCalma!");
 						numCalm++;
 						break;
 					
 					case 1:
-						System.out.println("Nervosa!");
+						System.out.println("\nNervosa!");
 						break;
 						
 					case 2: 
-						System.out.println("Agressiva!");
+						System.out.println("\nAgressiva!");
 						break;
 						
 					default:
-						System.out.println("Opção inválida! Por favor, escolha uma das opções listadas!");
+						System.out.println("\nOpção inválida! Por favor, escolha uma das opções listadas!");
 						
 				}
 				
