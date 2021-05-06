@@ -5,6 +5,11 @@ import java.util.*;
 public class ex_for2 {
 
 	public static void main(String[] args) {
+		
+		/*FOR
+		 
+		 Ler 10 números e imprimir quantos são pares e quantos são ímpares.
+		 */
 
 		Random r = new Random();
 		int par=0, impar=0, num;

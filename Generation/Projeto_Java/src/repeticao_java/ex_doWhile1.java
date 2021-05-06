@@ -6,6 +6,12 @@ public class ex_doWhile1 {
 
 	public static void main(String[] args) {
 		
+		/*DO...WHILE
+		  
+		 Crie um programa que leia um número do teclado até que encontre um número igual a zero. No final, mostre a soma dos números digitados.
+		 
+		 */
+		
 		Scanner read = new Scanner(System.in);
 		int num, soma = 0;
 				
