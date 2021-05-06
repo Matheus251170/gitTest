@@ -7,8 +7,7 @@ public class ex_doWhile2 {
 	public static void main(String[] args) {
 		
 		Scanner ler = new Scanner(System.in);
-		int num, soma = 0, cont = 0;
-		float media;
+		float media, num, soma = 0, cont = 0;;
 		do {
 			
 			System.out.print("\nEntre com um valor inteiro: ");
