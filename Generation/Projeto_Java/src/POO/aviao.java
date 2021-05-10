@@ -2,6 +2,11 @@ package POO;
 
 public class aviao {
 	
+	/*2) Crie uma classe avião e apresente os atributos e métodos referentes
+	esta classe, em seguida crie um objeto avião, defina as instancias deste
+	objeto e apresente as informações deste objeto no console.*/
+	
+	
 	private String nomeViajante;
 	private int idade;
 	private String paisNativo;
