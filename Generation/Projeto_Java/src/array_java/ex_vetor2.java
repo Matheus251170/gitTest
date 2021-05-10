@@ -25,7 +25,7 @@ public class ex_vetor2 {
 				
 				if(num[x] % 2 == 0)
 				{
-					System.out.println("\nPar " + num[x]);
+					System.out.println("\nPar: " + num[x]);
 					soma = soma + num[x];	
 				}
 				else

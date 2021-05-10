@@ -65,7 +65,7 @@ public class ex_matriz2 {
 				{
 					for(int c = 0; c < 2; c++)
 					{
-						m3[l][c] = m1[l][c] - m2[l][c];
+						m3[l][c] = m2[l][c] - m1[l][c];
 						
 						System.out.print("\nResultado: " + m3[l][c]);
 
@@ -134,7 +134,6 @@ public class ex_matriz2 {
 					System.out.println("Por favor, entre com uma opção válida!");
 		
 		}
-		
 
 	}
 
