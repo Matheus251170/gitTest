@@ -12,7 +12,7 @@ public class testeAnimal {
 		cavalo.imprimir();
 		cavalo.movimento();
 		
-		preguica preguica = new preguica("Roberto", 8, "", "Pregiça-Bentinho");
+		preguica preguica = new preguica("Roberto", 8, "Som de preguiça", "Pregiça-Bentinho");
 		preguica.imprimir();
 		preguica.movimento();
 	}
