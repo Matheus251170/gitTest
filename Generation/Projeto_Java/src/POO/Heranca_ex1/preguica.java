@@ -1,4 +1,4 @@
-package POO;
+package POO.Heranca_ex1;
 
 public class preguica extends animal {
 	
@@ -15,10 +15,11 @@ public class preguica extends animal {
 		System.out.println("Tipo de movimento: sobe em árvores");
 	}
 	
-	public void imprimir()
+	@Override
+	public String getSom()
 	{
-		System.out.println("\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nSom que emite: " + getSom() + "\nRaça: " 
-		+ getRaca());
+		return "\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nSom que emite: " + super.getSom() +
+		"\nRaça: " + getRaca();
 		
 	}
 

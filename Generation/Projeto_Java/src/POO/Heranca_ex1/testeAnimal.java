@@ -1,20 +1,24 @@
-package POO;
+package POO.Heranca_ex1;
 
 public class testeAnimal {
 	
 	public static void main(String[] args) {
 		
-		cachorro cao = new cachorro("Bob", 6, "Latido", "Buldog");
-		cao.imprimir();
-		cao.movimento();
+		cachorro cao = new cachorro("Bob", 6, "Latido","Buldog");
 		
 		cavalo cavalo = new cavalo("Ponyta", 13, "Relinchar", "Percheron");
-		cavalo.imprimir();
-		cavalo.movimento();
 		
-		preguica preguica = new preguica("Roberto", 8, "Som de preguiça", "Pregiça-Bentinho");
-		preguica.imprimir();
-		preguica.movimento();
+		preguica preguica = new preguica("Roberto", 8, "Grunhido", "Pregiça-Bentinho");
+		
+		animal[] animais = new animal[3];
+		animais[0] = cao;
+		animais[1] = cavalo;
+		animais[2] = preguica;
+		
+		for(animal anim:animais)
+		{
+			System.out.println(anim.getSom());
+		}
 	}
 
 }

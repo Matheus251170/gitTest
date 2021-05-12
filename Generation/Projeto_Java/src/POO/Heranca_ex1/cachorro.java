@@ -1,4 +1,4 @@
-package POO;
+package POO.Heranca_ex1;
 
 public class cachorro extends animal{
 	
@@ -9,16 +9,16 @@ public class cachorro extends animal{
 		
 	}
 	
-	
 	public void movimento()
 	{
-		System.out.println("Tipo de movimento: Correr");
+		System.out.println("\nTipo de movimento: Correr");
 	}
 	
-	public void imprimir()
+	@Override
+	public String getSom()
 	{
-		System.out.println("\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nSom que emite: " + getSom() + "\nRaça: " 
-		+ getRaca());
+		return "\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nSom que emite: " + super.getSom() +
+		"\nRaça: " + getRaca();
 		
 	}
 
