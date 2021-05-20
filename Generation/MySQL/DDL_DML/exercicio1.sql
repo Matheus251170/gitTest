@@ -37,11 +37,16 @@ INSERT INTO tb_func (nome, salario, funcao, idade) VALUES ("Marcio", 1992.81, "P
 INSERT INTO tb_func (nome, salario, funcao, idade) VALUES ("Pablo",2756.95, "Desenvolvedor WEB", 27);
 
 
-SELECT * FROM tb_func WHERE salario > 2000;
-SELECT * FROM tb_func WHERE salario < 2000;
+SELECT * FROM tb_func WHERE salario > 2000; -- exibindo salarios maiores que 2000
+SELECT * FROM tb_func WHERE salario < 2000; -- exibindo salarios menores que 2000
+
+
+-- atualizando dados
 
 UPDATE tb_func
 SET salario = 6000
 WHERE id = 5;
 
+
+-- mostrando dados da tabela
 SELECT * from tb_func;

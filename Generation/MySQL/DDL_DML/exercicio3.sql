@@ -26,9 +26,11 @@ Ao término atualize um dado desta tabela através de uma query de atualização
 
 */
 
-CREATE DATABASE bd_escola;
-USE bd_escola;
+CREATE DATABASE bd_escola; -- criando database
+USE bd_escola; -- usando database
 
+
+-- criando tabela
 CREATE TABLE tb_alunes(
 
 	cod INT AUTO_INCREMENT PRIMARY KEY,
@@ -38,6 +40,7 @@ CREATE TABLE tb_alunes(
     notas DECIMAL(10, 2)
 );
 
+-- inserindo dados
 
 INSERT INTO tb_alunes (nome, turma, materia, notas) VALUES ("Matheus", "A", "Programação Java", 10);
 INSERT INTO tb_alunes (nome, turma, materia, notas) VALUES ("Kaio", "A", "Desenvolvimento Web", 8.6);
@@ -50,11 +53,14 @@ INSERT INTO tb_alunes (nome, turma, materia, notas) VALUES ("Yuri", "E", "Banco 
 
 
 
-SELECT * FROM tb_alunes WHERE notas > 7;
-SELECT * FROM tb_alunes WHERE notas < 7;
+SELECT * FROM tb_alunes WHERE notas > 7; -- mostrando notas maiores que sete
+SELECT * FROM tb_alunes WHERE notas < 7; -- mostrando notas menores que sete
+
+-- atualizando dados
 
 UPDATE tb_alunes
 SET notas = 6.6
 WHERE cod = 6;
 
+-- exibindo os dados da tabela
 SELECT * FROM tb_alunes;

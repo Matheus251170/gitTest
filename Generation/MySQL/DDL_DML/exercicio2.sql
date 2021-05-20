@@ -12,9 +12,10 @@ Faça um select que retorne os produtos com o valor menor do que 500.
 Ao término atualize um dado desta tabela através de uma query de atualização.
 
 */
-CREATE DATABASE db_estoque;
-USE db_estoque;
+CREATE DATABASE db_estoque; -- criando database
+USE db_estoque; -- usando database
 
+-- criando tabelas
 
 CREATE TABLE tb_produtos(
 
@@ -25,6 +26,8 @@ CREATE TABLE tb_produtos(
     qtd INT
 );
 
+
+-- inserindo dados
 
 INSERT INTO tb_produtos (nome,preco,marca, qtd) VALUES ("Sapato",500.53, "Nike", 250);
 INSERT INTO tb_produtos (nome,preco,marca, qtd) VALUES ("Camisa",58.18, "Nike", 300);
@@ -39,11 +42,16 @@ INSERT INTO tb_produtos (nome,preco,marca, qtd) VALUES ("Camisa",526.92, "Zara",
 
 
 
-SELECT * FROM tb_produtos WHERE preco > 500;
-SELECT * FROM tb_produtos WHERE preco < 500;
+SELECT * FROM tb_produtos WHERE preco > 500; -- mostrando preço maior que quinhentos
+SELECT * FROM tb_produtos WHERE preco < 500; -- mostrando preço menor que quinhentos
+
+-- atualizando dados
 
 UPDATE tb_produtos
 SET preco = 600
 WHERE id = 6;
+
+
+-- exibindo os dados da tabela
 
 SELECT * from tb_func;
