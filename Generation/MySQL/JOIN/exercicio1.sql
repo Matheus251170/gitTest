@@ -27,8 +27,10 @@ Faça um select onde traga todos os personagem de uma classe específica (exempl
 */
 
 
-CREATE DATABASE db_generation_game_online;
-USE db_generation_game_online;
+CREATE DATABASE db_generation_game_online; -- criando base de dados
+USE db_generation_game_online; -- usando base de dados
+
+-- criando tabelas
 
 CREATE TABLE tb_personagem(
 
@@ -49,6 +51,8 @@ CREATE TABLE tb_classe(
     arma VARCHAR(100)
 );
 
+-- inserindo dados na tb_classe
+
 INSERT INTO tb_classe (nome_class, arma) VALUES ("Ladino", "Adagas");
 INSERT INTO tb_classe (nome_class, arma) VALUES ("Guerreiro", "Espada de duas mãos");
 INSERT INTO tb_classe (nome_class, arma) VALUES ("Mago", "Cajado");
@@ -56,6 +60,7 @@ INSERT INTO tb_classe (nome_class, arma) VALUES ("Bruxo", "Grimório");
 INSERT INTO tb_classe (nome_class, arma) VALUES ("Espadachim", "Espada de uma mão");
 
 
+-- inserindo dados na tb_personagem
 
 INSERT INTO tb_personagem (nome_char, nivel_char, pet, poder_ataque, poder_defesa, id) VALUES ("Erik_Gameplays", 89,"Lobo Sombrio", 3698, 2356, 2);
 INSERT INTO tb_personagem (nome_char, nivel_char, pet, poder_ataque, poder_defesa, id) VALUES ("Cortana", 56, "", 2985, 2546, 5);
@@ -68,14 +73,16 @@ INSERT INTO tb_personagem (nome_char, nivel_char, pet, poder_ataque, poder_defes
 
 
 
-SELECT * FROM tb_personagem WHERE poder_ataque > 2000;
-SELECT * FROM tb_personagem WHERE poder_defesa BETWEEN 1000 AND 2000;
-SELECT * FROM tb_personagem WHERE nome_char LIKE "c%";
+SELECT * FROM tb_personagem WHERE poder_ataque > 2000; -- buscando todos os personagens com ataque superior a 2000
+SELECT * FROM tb_personagem WHERE poder_defesa BETWEEN 1000 AND 2000; -- buscando personagens com defesa entre 1000 e 2000
+SELECT * FROM tb_personagem WHERE nome_char LIKE "c%"; -- buscando personagens com a letra C
 
-
+-- fazendo uma ocnsulta nas duas tabelas usando INNER JOIN
 SELECT nome_char AS Nome, nivel_char AS Nivel, nome_class AS Classe, arma AS Arma, pet AS Pet
 FROM tb_personagem
 INNER JOIN tb_classe ON tb_personagem.id = tb_classe.id_class;
 
+-- buscando todos os personagens da classe de GUERREIRO
 SELECT nome_char AS NOME, nome_class AS CLASSE FROM tb_personagem
-INNER JOIN  tb_classe ON tb_personagem.id = 1 = tb_classe.id_class;
+INNER JOIN  tb_classe ON tb_personagem.id = tb_classe.id_class
+WHERE nome_class IN ("Guerreiro");

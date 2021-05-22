@@ -25,8 +25,11 @@ Faça um select onde traga todos os Produtos de uma categoria específica (exemp
 
 */
 
-CREATE DATABASE db_pizzaria_legal;
-USE db_pizzaria_legal;
+CREATE DATABASE db_pizzaria_legal; -- criando database
+USE db_pizzaria_legal; -- usando database
+
+
+-- criando tabelas
 
 CREATE TABLE tb_categoria(
 	
@@ -45,6 +48,8 @@ CREATE TABLE tb_pizza(
     FOREIGN KEY (fk_id) REFERENCES tb_categoria(id_categoria)
 );
 
+
+-- inserindo dados da tabela categoria
 INSERT INTO tb_categoria (nome_categoria, forma) VALUES ("Salgada", "Redonda");
 INSERT INTO tb_categoria (nome_categoria, forma) VALUES ("Salgada", "Quadrada");
 INSERT INTO tb_categoria (nome_categoria, forma) VALUES ("Doce", "Redonda");
@@ -52,7 +57,7 @@ INSERT INTO tb_categoria (nome_categoria, forma) VALUES ("Doce", "Quadrada");
 INSERT INTO tb_categoria (nome_categoria, forma) VALUES ("Esfiha", "Redonda");
 
 
-
+-- inserindo dados na tabela pizza
 INSERT INTO tb_pizza (preco, sabor, acompanhamento, fk_id) VALUES (29.99, "Portuguesa", "Fanta Laranja", 1);
 INSERT INTO tb_pizza (preco, sabor, acompanhamento, fk_id) VALUES (59.99, "Metade Catupiry/Calabresa", "Coca-Cola", 1);
 INSERT INTO tb_pizza (preco, sabor, acompanhamento, fk_id) VALUES (35.60, "Chocolate", "Fanta Uva", 3);
@@ -63,15 +68,18 @@ INSERT INTO tb_pizza (preco, sabor, acompanhamento, fk_id) VALUES (43.59, "Catup
 INSERT INTO tb_pizza (preco, sabor, acompanhamento, fk_id) VALUES (42.22, "Calabresa", "Guaraná", 2);
 
 
-SELECT * FROM tb_pizza WHERE preco > 45.00;
-SELECT * FROM tb_pizza WHERE preco BETWEEN 29.00 AND 60.00;
-SELECT * FROM tb_pizza WHERE sabor LIKE 'C%';
+SELECT * FROM tb_pizza WHERE preco > 45.00; -- buscando pizzas com valor superior a 45
+SELECT * FROM tb_pizza WHERE preco BETWEEN 29.00 AND 60.00; -- buscando pizzas com valor entre 29 e 60
+SELECT * FROM tb_pizza WHERE sabor LIKE 'C%'; -- buscando pizzas com a letra C
 
+
+-- fazendo uma consulta nas duas tabelas usando INNER JOIN
 SELECT sabor AS SABOR, nome_categoria AS CATEGORIA, acompanhamento AS ACOMPANHAMENTO, preco AS PRECO 
 FROM tb_pizza
 INNER JOIN tb_categoria ON tb_pizza.fk_id = tb_categoria.id_categoria;
 
-
+-- buscando pizzas salgadas
 SELECT sabor AS SABOR, nome_categoria AS CATEGORIA
 FROM tb_pizza
-INNER JOIN tb_categoria ON tb_pizza.fk_id = 1 = tb_categoria.id_categoria;
+INNER JOIN tb_categoria ON tb_pizza.fk_id = 1 = tb_categoria.id_categoria
+WHERE nome_categoria IN ("Salgada");
