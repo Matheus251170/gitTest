@@ -8,8 +8,10 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 	@Entity
@@ -22,7 +24,7 @@ import javax.validation.constraints.Size;
 	private long id;
 	
 	@NotNull
-	@Size(min = 5, max = 100)
+	@Size(min = 5, max = 500)
 	private String texto;
 	
 	@NotNull
@@ -32,6 +34,9 @@ import javax.validation.constraints.Size;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date = new java.sql.Date(System.currentTimeMillis());
 	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Tema tema;
 	
 	
 	//getters and setters	
@@ -59,6 +64,11 @@ import javax.validation.constraints.Size;
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
+	public Tema getTema() {
+		return tema;
+	}
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
 	
 }
