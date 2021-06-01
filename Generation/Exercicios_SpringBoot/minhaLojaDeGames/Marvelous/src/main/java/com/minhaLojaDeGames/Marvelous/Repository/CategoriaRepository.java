@@ -9,7 +9,6 @@ import com.minhaLojaDeGames.Marvelous.Model.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long>{
 	
-	public List<Categoria> findAllByCategoriaContainingIgnoreCase(String categoria);
 	public List<Categoria> findAllByDescricaoContainingIgnoreCase(String descricao);
 
 }

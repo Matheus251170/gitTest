@@ -25,6 +25,13 @@ public class CategoriaController {
 	private @Autowired CategoriaRepository repository;
 	
 	
+	
+	/**
+	 * Método que busca por todas as categorias existentes no banco.
+	 * @return Retorn odas as categorias cadastradas.
+	 * @author Matheus
+	 */
+	
 	@GetMapping("/todas")
 	public ResponseEntity<List<Categoria>> getAll()
 	{
@@ -34,6 +41,13 @@ public class CategoriaController {
 	
 	
 	
+	/**
+	 * Método que busca a categoria pelo ID.
+	 * @param id
+	 * @return Retorna a categoria referente ao ID inserido. 
+	 * @author Matheus
+	 */
+	
 	@GetMapping("/id/{id}")
 	public ResponseEntity<Categoria> getById(@PathVariable long id)
 	{
@@ -42,11 +56,26 @@ public class CategoriaController {
 	
 	
 	
+	/**
+	 * Método que faz busca pela descrição da categoria, buscando palavras em comum. CamelCase é ignorado.
+	 * @param descricao
+	 * @return Retorna todas as categorias que possuem resultado em comum ao parâmetro inserido.
+	 * @author Matheus
+	 */
+	
 	@GetMapping("descricao/{descricao}")
 	public ResponseEntity<List<Categoria>> getByDescricao(@PathVariable String descricao)
 	{
 		return ResponseEntity.status(202).body(repository.findAllByDescricaoContainingIgnoreCase(descricao));
 	}
+	
+	
+	/**
+	 * Método que adiciona uma nova categoria ao banco.
+	 * @param novaCategoria
+	 * @return Adiciona uma categoria ao banco e retorna status CREATED(201).
+	 * @author Matheus
+	 */
 	
 	@PostMapping ("/novaCategoria")
 	public ResponseEntity<Categoria> post(@RequestBody Categoria novaCategoria)
@@ -54,6 +83,12 @@ public class CategoriaController {
 		return ResponseEntity.status(201).body(repository.save(novaCategoria));
 	}
 	
+	/**
+	 * Método responsavel por atualizar os dados de uma categoria já existente no banco de dados.
+	 * @param novaCategoria
+	 * @return Atualiza os dados de uma categoria especifica e retorna o status OK(200).
+	 * @author Matheus
+	 */
 	
 	@PutMapping("/atualizar")
 	public ResponseEntity<Categoria> put(@RequestBody Categoria novaCategoria)
@@ -61,6 +96,12 @@ public class CategoriaController {
 		return ResponseEntity.status(200).body(repository.save(novaCategoria));
 	}
 	
+	
+	/**
+	 * Método responsável por deletar dados do banco.
+	 * @param id
+	 * @author Matheus
+	 */
 	@DeleteMapping("/delete/{id}")
 	public void deleteCategoria(@PathVariable long id)
 	{
