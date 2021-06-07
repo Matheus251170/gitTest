@@ -3,7 +3,7 @@ import java.util.List;
 
 
 import org.generation.blogPessoal.model.Tema;
-import org.generation.blogPessoal.reposiroy.temaRepository;
+import org.generation.blogPessoal.reposiroy.TemaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/tema")
-public class temaController {
+public class TemaController {
 
 	@Autowired
-	private temaRepository repo;
+	private TemaRepository repo;
 	
 	@GetMapping
 	public ResponseEntity<List<Tema>> getAll(){

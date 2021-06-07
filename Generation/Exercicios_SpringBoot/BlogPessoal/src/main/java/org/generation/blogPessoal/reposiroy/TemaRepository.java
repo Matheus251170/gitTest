@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.generation.blogPessoal.model.Tema;
 
-public interface temaRepository extends JpaRepository<Tema, Long> {
+public interface TemaRepository extends JpaRepository<Tema, Long> {
 	
 	public List<Tema> findAllByDescricaoContainingIgnoreCase(String descricao);
 
