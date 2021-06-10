@@ -24,7 +24,7 @@ public class PostagemController {
 	@Autowired
 	private PostagemRepository repo;
 	
-	@GetMapping
+	@GetMapping("/todos")
 	public ResponseEntity<List<Postagem>> GetAll(){
 		
 		return	ResponseEntity.ok(repo.findAll());
