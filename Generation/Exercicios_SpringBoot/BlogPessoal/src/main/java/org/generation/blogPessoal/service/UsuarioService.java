@@ -1,4 +1,4 @@
-package org.generation.blogPessoal.Service;
+package org.generation.blogPessoal.service;
 
 import java.nio.charset.Charset;
 import java.util.Optional;
@@ -40,7 +40,7 @@ public class UsuarioService {
 				String auth = user.get().getUsuario() + ": " + user.get().getSenha();
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				
-				String authHeader = "Basic" + new String(encodedAuth);
+				String authHeader = "Basic " + new String(encodedAuth);
 				
 				user.get().setToken(authHeader);
 				user.get().setNome(usuario.get().getNome());

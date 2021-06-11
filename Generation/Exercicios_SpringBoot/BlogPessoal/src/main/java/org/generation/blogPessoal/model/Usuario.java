@@ -29,6 +29,8 @@ public class Usuario {
 	private String senha;
 
 	
+	
+	
 	public Usuario(String nome, String senha) {
 		
 		this.nome = nome;
@@ -37,6 +39,8 @@ public class Usuario {
 	
 	public Usuario() {};
 
+	
+	
 	//getters and setters
 	public long getId() {
 		return id;
