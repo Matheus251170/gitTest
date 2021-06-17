@@ -1,0 +1,130 @@
+.center
+{
+    text-align: center;
+}
+#color
+{
+    background-color: #130f40;
+    padding: 1rem;
+}
+.just
+{
+    text-align: justify;
+}
+#menu li
+{
+    display: inline;
+    padding: 30px;
+    justify-content: center;
+}
+#menu a:active
+{
+    color: #eb4d4b;
+}
+#menu a:link
+{
+    color: #eb4d4b;
+    text-decoration: none   ;
+}
+#menu a:visited
+{
+    color: #eb4d4b;
+}
+#menu a:hover
+{
+    color: #ff7979;
+}
+
+.profile
+{
+    height: 260px;
+    width: 260;
+    border-radius: 150px;
+}
+
+.container
+{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.wp-30
+{
+    padding: 30px;
+}
+#mg-30
+{
+    margin: 70px;
+}
+.bt-30
+{
+    padding-bottom: 30px;
+}
+
+.info
+{
+    display: block;
+    flex-flow: column;
+    background-image: url("../img/bg.jfif");
+    background-repeat: no-repeat;
+}
+
+#about
+{
+    margin: 30px 70px;
+    
+}
+
+#about td
+{
+    padding: 0 0 0 20px;
+}
+
+#follow
+{
+    text-align: center;
+    font-size: 1.567rem;
+}
+
+/* ---------------------------------------------- contato -------------------------------------------------- */
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+   
+}
+
+input[type=email],[type=text], textarea
+{
+    width: 350px;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.cont{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+button
+{
+    background-color: #3f4279;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover
+{
+    opacity: 0.9;
+}
