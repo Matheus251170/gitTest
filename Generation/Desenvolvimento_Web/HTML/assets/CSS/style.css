@@ -1,3 +1,5 @@
+/* ----------------------------- index ----------------------------------- */
+
 .center
 {
     text-align: center;
@@ -38,8 +40,10 @@
 .profile
 {
     height: 260px;
-    width: 260;
-    border-radius: 150px;
+    width: 260px;
+    border-radius: 200px;
+    box-shadow: #1a3c5f 1px 9px 10px 4px;
+    margin: 30px;
 }
 
 .container
@@ -54,7 +58,7 @@
 {
     padding: 30px;
 }
-#mg-30
+#mg-70
 {
     margin: 70px;
 }
@@ -66,9 +70,10 @@
 .info
 {
     display: block;
-    flex-flow: column;
+    width: 311px;
     background-image: url("../img/bg.jfif");
     background-repeat: no-repeat;
+    box-shadow: #1a3c5f 1px 9px 10px 10px;
 }
 
 #about
