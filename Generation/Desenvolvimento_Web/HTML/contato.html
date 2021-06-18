@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <title>Blog Pessoal</title>
 </head>
-<body>
-    
-       <div class="center" id="color">
-            <div id="menu">
-                <ul>
-                    <li>
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="contato.html">CONTATO</a>
-                    </li>
-                    <li>
-                        <a href="linguagens_programacao.html">LINGUAGENS</a>
-                    </li>
-                    <li>
-                        <a href="fundamentos_web.html">FUNDAMENTOS WEB</a>
-                    </li>
-                </ul>
-            </div>
-       </div>
 
-       <div class="cont center">
+<body>
+
+    <div class="center" id="color">
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="contato.html">CONTATO</a>
+                </li>
+                <li>
+                    <a href="linguagens_programacao.html">LINGUAGENS</a>
+                </li>
+                <li>
+                    <a href="fundamentos_web.html">FUNDAMENTOS WEB</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cont center">
 
         <h1 class="center">Mande-me uma mensagem:</h1>
 
-           <div class="wp-30">
-               <form action="">
-                   <input type="text" placeholder="Insira seu nome" required>
-                   
-                   <input type="email" placeholder="Insira seu email" required>
-                   
-                   <textarea name="mensagem" placeholder="Insira sua mensagem" id="" cols="30" rows="10" required></textarea>
+        <div class="wp-30">
+            <form action="">
+                <input type="text" placeholder="Insira seu nome" id="nome" onkeyup="validaNome()" required>
+                <div id="txtNome"></div>
 
-                  <button type="submit">Enviar</button>
-               </form>
-           </div>
+                <input type="email" placeholder="Insira seu email" id="email" onkeyup="validaEmail()" required>
+                <div id="txtEmail"></div>
 
-           <div>
-               <h2 class="center">Aonde moro?</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.7409415674447!2d-46.437256184389206!3d-23.397587261451104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce897c0ffaeaa9%3A0x9089b82be355381!2sAv.%20Monte%20Alegre%2C%201428%20-%20Cidade%20Soberana%2C%20Guarulhos%20-%20SP%2C%2007161-150!5e0!3m2!1spt-BR!2sbr!4v1623948230254!5m2!1spt-BR!2sbr" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" target="_blank"></iframe>
-           </div>
-       </div>
+                <textarea name="mensagem" placeholder="Insira sua mensagem" id="mensagem" cols="30" rows="10" onkeyup="validaMensagem()" required></textarea>
+                    <div id="txtMensagem"></div>
 
-        <hr>
+                <button type="submit" onclick="enviar()">Enviar</button>
+            </form>
+        </div>
 
-        <footer class="center">
-            <div>
-                &copyMarcosMatheus All Rights Reserved 
-            </div>
-        </footer>
+        <div>
+            <h2 class="center">Aonde moro?</h2>
+            <iframe class="bt-30" id="mapa" onmousemove="mapaZoom()" onmouseout="mapaNormal()"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.7409415674447!2d-46.437256184389206!3d-23.397587261451104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce897c0ffaeaa9%3A0x9089b82be355381!2sAv.%20Monte%20Alegre%2C%201428%20-%20Cidade%20Soberana%2C%20Guarulhos%20-%20SP%2C%2007161-150!5e0!3m2!1spt-BR!2sbr!4v1623948230254!5m2!1spt-BR!2sbr"
+                width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" target="_blank"></iframe>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer class="center">
+        <div>
+            &copyMarcosMatheus All Rights Reserved
+        </div>
+    </footer>
+
+
+    <script src="assets/JavaScript/javascript.js"></script>
+</body>
+
+</html>

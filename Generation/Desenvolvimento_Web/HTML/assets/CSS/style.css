@@ -116,6 +116,7 @@ input[type=email],[type=text], textarea
 
 button
 {
+    margin-top: 15px;
     background-color: #3f4279;
     padding: 10px;
     border-radius: 6px;
