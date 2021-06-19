@@ -1,5 +1,7 @@
 /* ----------------------------- index ----------------------------------- */
-
+body{
+    background-color: antiquewhite;
+}
 .center
 {
     text-align: center;
@@ -71,6 +73,7 @@
 {
     display: block;
     width: 311px;
+    height: 650px;
     background-image: url("../img/bg.jfif");
     background-repeat: no-repeat;
     box-shadow: #1a3c5f 1px 9px 10px 10px;
@@ -93,6 +96,15 @@
     font-size: 1.567rem;
 }
 
+.fz-30
+{
+    font-size: 2rem;
+}
+
+.mr
+{
+    margin-right: 50px;
+}
 /* ---------------------------------------------- contato -------------------------------------------------- */
 
 form
